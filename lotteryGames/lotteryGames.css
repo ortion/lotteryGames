@@ -1,0 +1,380 @@
+body {
+    background: #fabc00;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    /* 10px */
+}
+
+/* 开始页面 */
+
+.start-container {
+    background: url("images/startBG.png") no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.time-text {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffda2d;
+    font-size: 1.4rem
+    /* margin-top: -120px; */
+}
+
+.start-button {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e8134b;
+    color: #ffda2d;
+    width: 50%;
+    -moz-box-shadow: 2px 2px 5px #daa503;
+    -webkit-box-shadow: 2px 2px 5px #daa503;
+    box-shadow: 2px 2px 5px #daa503;
+}
+
+/* 九宫格抽奖 */
+
+.luckydraw-container {
+    background: #fabc00 url("images/luckyBg.png") no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+    height: 100%;
+    /* background-size: fixed; */
+    position: fixed;
+}
+
+.luckGame-bg {
+    background: url("images/gameBg.png") no-repeat top center;
+    background-size: 100% auto;
+    width: 95%;
+    height: 100%;
+    margin: 40% auto 0;
+    position: relative
+}
+
+#luck {
+    width: 70%;
+    padding-bottom: 70%;
+    margin: 0 auto;
+    position: absolute;
+    top: 10%;
+    left: 17%;
+}
+
+#luck .weui-grids:before {
+    border: 0;
+}
+
+#luck .weui-grids:after {
+    border: 0;
+}
+
+#luck .weui-grid:after {
+    border: 0;
+}
+
+#luck .weui-grid:before {
+    border: 0;
+}
+
+.luck-unit {
+    background: #f9de33;
+    border-radius: 10px;
+    border: 3px solid #f85952;
+    text-align: center;
+    margin: 1%;
+    width: 29.77%;
+    /* height: 100%; */
+    padding: 0 1% 24.5%;
+    position: relative;
+    /* height: 103px; */
+}
+
+#luck .active {
+    background: #ffffff;
+    border: 3px solid #f9de33;
+}
+
+.luck-unit-center {
+    padding: 5px;
+    /* background: #f9de33;
+    border-radius: 10px;
+    border: 3px solid #f85952; */
+    text-align: center;
+    margin: 2px;
+    width: 30%;
+}
+
+.luck-unit .weui-grid__icon {
+    position: absolute;
+    width: 90%;
+    height: 50%;
+    margin: 20% auto 0 !important;
+}
+
+.luck-unit p.residue {
+    position: absolute;
+    width: 90%;
+    /* font-size: 1.0rem; */
+    color: #e8124a;
+    margin-bottom: 1%;
+}
+
+.luck-unit p.weui-grid__label {
+    position: absolute;
+    width: 90%;
+    margin: 65% auto 0 !important;
+    font-size: 1.1rem;
+    color: #e8124a;
+}
+
+.startDraw {
+    position: absolute;
+    bottom: 30%;
+    left: 34%;
+    width: 30%;
+}
+
+.share-btn {
+    position: absolute;
+    bottom: 31%;
+    right: 11%;
+    width: 17%;
+}
+
+.rule-btn {
+    position: absolute;
+    bottom: 31%;
+    left: 11%;
+    width: 17%;
+}
+
+.luckydraw-num {
+    width: 80%;
+    background: #d82828;
+    border-radius: 20px;
+    border: 1px solid #e44025;
+    margin: 0 auto;
+    margin-top: 10px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.luckydraw-num em {
+    margin: 0 5px;
+    color: #ffd737;
+}
+
+/**弹出窗popup 无titlecss*/
+
+.draw-dialog {
+    position: fixed;
+    z-index: 5000;
+    width: 80%;
+    max-width: 300px;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.close-draw {
+    width: 10%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.win {
+    background: url("images/winBG.png") no-repeat;
+    /* width: 100%;
+    height: 100%; */
+    background-size: 100%;
+    margin-top: 10%;
+}
+
+.fail {
+    background: url("images/failBG.png") no-repeat;
+    /* width: 100%;
+    height: 70%; */
+    background-size: 100%;
+    margin-top: 20%;
+}
+
+.win .btn {
+    background: #e8134b;
+    /* width: 40%; */
+    font-size: 1.6rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15%;
+}
+
+.fail .btn {
+    background: #e8134b;
+    /* width: 40%; */
+    position: absolute;
+    /* bottom: 27%; */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5%;
+}
+
+.draw-content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.4rem;
+    width: 100%;
+    margin-top: 65%;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    height: 34px;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-indent: 5px;
+}
+
+.form-group {
+    margin-top: 5%;
+}
+
+/*签到规则弹出框*/
+
+.rule {
+    width: 100%;
+    height: 70%;
+    color: #000000;
+}
+
+.rule-card {
+    text-align: left;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+}
+
+.rule-title {
+    width: 80%;
+    margin: 10px auto 10px;
+}
+
+/* 我的积分 */
+
+.luckydraw-score {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+}
+
+/* 公告  */
+
+.prize-message {
+    width: 60%;
+    position: absolute;
+    /* top: 2%; */
+    left: 50%;
+    transform: translateX(-50%);
+    /* margin-left:-8%; */
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: 4%;
+    
+}
+
+.slide {
+    width:100%;
+    height:20px;
+    line-height: 20px;
+    margin: 0 auto 0;
+    overflow: hidden;
+    position: relative;
+}
+.slide i{
+    position: absolute;
+    left: 0;
+    top:0;
+}
+
+.slideUl{
+    position: absolute;
+    left: 20px;
+    top:0;
+}
+
+/* 分享提示 */
+.shareTip-img{
+    width: 80%;
+    position: absolute;
+    right:1%;
+    top: 1%;
+}
+.share .btn{
+    border:2px solid #fff;
+    width: 50%;
+    margin-top: 400px;
+
+}
+
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2) {
+    /* 兼容iphone5 */
+    /* .luck-unit .weui-grid__icon {
+        width: 100%;
+        height: 20px;
+    } */
+    .win {
+        background: url("images/winBG.png") no-repeat;
+        width: 80%;
+        height: 90%;
+        background-size: 100%;
+    }
+    .fail {
+        background: url("images/failBG.png") no-repeat;
+        width: 80%;
+        height: 70%;
+        background-size: 100%;
+    }
+    .draw-content {
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.4rem;
+        width: 100%;
+    }
+}
